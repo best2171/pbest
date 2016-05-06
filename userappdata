@@ -1,0 +1,4 @@
+SELECT application_name, computer_id, minutes_foreground, usage_date_epoch, application_path 
+FROM jamfsoftware.application_usage_logs 
+Where minutes_foreground>1 and computer_id=1 and usage_date_epoch>1459961982 and application_name not in ("Locked" ,"loginwindow.app")
+order by computer_id;
